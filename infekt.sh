@@ -36,6 +36,7 @@ sudo softwareupdate --install-rosetta
 
 . system/install.sh
 . packages/install.sh
+. standalone/install.sh
 . vscode/install.sh
 . fish/install.sh
 

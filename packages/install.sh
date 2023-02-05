@@ -13,10 +13,6 @@ sudo -v
 PREVIOUS_DIRECTORY=$(pwd)
 cd $PACKAGES_DIR
 
-info "Running standalone installers..."
-. ./standalone.sh
-success "Standalone installers ran successfully."
-
 info "Installing Brewfile packages..."
 warning "This may take a while..."
 brew bundle
