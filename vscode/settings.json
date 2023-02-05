@@ -1,0 +1,180 @@
+{
+  // Theme customization
+  "workbench.iconTheme": "macos-modern-minimal-mono-icon-theme",
+  "workbench.colorTheme": "Tomorrow Night",
+  "workbench.tree.indent": 20,
+  "workbench.productIconTheme": "macos-modern",
+  "workbench.editor.highlightModifiedTabs": true,
+
+  "window.titleBarStyle": "custom",
+  "window.dialogStyle": "custom",
+  "window.restoreWindows": "none",
+
+  "editor.minimap.enabled": false,
+
+  "editor.rulers": [80, 120],
+  "editor.fontFamily": "IBM Plex Mono",
+  "editor.fontWeight": "normal",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 13,
+  "editor.tabSize": 4,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.roundedSelection": false,
+  "editor.foldingHighlight": false,
+
+  "editor.wrappingIndent": "indent",
+  "editor.renderWhitespace": "trailing",
+  "editor.bracketPairColorization.enabled": true,
+
+  "[haskell][nix][typescriptreact][clojure]": {
+    "editor.guides.bracketPairs": true
+  },
+
+  "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+  "terminal.integrated.fontSize": 13,
+
+  "editor.semanticTokenColorCustomizations": {
+    "enabled": true,
+    "rules": {
+      "comment": "#AAA",
+      "comment.documentation": "#6A9955",
+      "*.mutable": {
+        "fontStyle": "underline"
+      },
+      "*.unsafe": {
+        "fontStyle": "bold underline italic"
+      }
+    }
+  },
+
+  // Development experience
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+
+  "editor.inlayHints.enabled": "on",
+  "editor.inlineSuggest.enabled": true,
+  "editor.wordBasedSuggestions": false,
+  "editor.quickSuggestionsDelay": 200,
+
+  "editor.lineNumbers": "relative",
+
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.linkedEditing": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  "git.enableSmartCommit": true,
+  "git.mergeEditor": false,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+
+  "errorLens.messageMaxChars": 80,
+  "errorLens.onSaveTimeout": 2000,
+
+  "terminal.integrated.profiles.osx": {
+    "rosetta": {
+      "path": "/usr/bin/arch",
+      "args": ["-arch", "x86_64", "/bin/zsh"]
+    }
+  },
+
+  "files.eol": "\n",
+
+  "files.associations": {
+    "BUILD": "starlark",
+    "WORKSPACE": "starlark"
+  },
+
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/node_modules": true
+  },
+
+  // Rust settings
+  "rust-analyzer.imports.granularity.enforce": true,
+  "rust-analyzer.imports.prefix": "crate",
+  "rust-analyzer.inlayHints.lifetimeElisionHints.enable": "skip_trivial",
+  "rust-analyzer.checkOnSave": true,
+  "rust-analyzer.check.command": "clippy",
+  "rust-analyzer.lens.run.enable": false,
+  "rust-analyzer.lens.debug.enable": false,
+  "rust-analyzer.diagnostics.disabled": ["unresolved-proc-macro"],
+  "[rust]": { "editor.defaultFormatter": "rust-lang.rust-analyzer" },
+  "[toml]": { "editor.defaultFormatter": "tamasfe.even-better-toml" },
+
+  // Web development settings
+  "eslint.alwaysShowStatus": true,
+
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  "[json][jsonc][javascript][typescript][css][html][yaml][typescriptreact][scss]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+
+  // Markdown
+  "prettier.proseWrap": "always",
+
+  "[markdown]": {
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.wordWrap": "off",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    }
+  },
+
+  // Makefile
+  "[makefile]": {
+    "editor.defaultFormatter": "ms-vscode.makefile-tools"
+  },
+
+  // Bazel settings
+  "[bazel]": {
+    "editor.defaultFormatter": "StackBuild.bazel-stack-vscode"
+  },
+
+  // Terraform settings
+  "[terraform]": {
+    "editor.defaultFormatter": "hashicorp.terraform"
+  },
+
+  // Nix
+  "nix.enableLanguageServer": true,
+  "nix.serverPath": "nil",
+
+  "nix.serverSettings": {
+    "nil": {
+      "formatting": {
+        "command": ["alejandra"]
+      }
+    }
+  },
+
+  "[nix]": {
+    "editor.defaultFormatter": "jnoortheen.nix-ide",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+
+  // Shell
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+
+  // Other
+  "redhat.telemetry.enabled": false,
+  "liveServer.settings.donotVerifyTags": true
+}
