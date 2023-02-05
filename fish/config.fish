@@ -16,3 +16,5 @@ set -x -g PATH ~/bin ~/.local/bin $PATH
 
 set -x -g PATH $HOME/.fnm $PATH
 fnm env --use-on-cd | source
+
+set -g fish_greeting
