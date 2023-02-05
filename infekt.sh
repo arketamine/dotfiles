@@ -36,4 +36,8 @@ sudo softwareupdate --install-rosetta
 
 . ./packages/install.sh
 
+find * -name "install.sh" -not -wholename "packages*" | while read path; do
+    . ./$path
+done
+
 success "Finished installing 'dotfiles'. Happy hacking!"
