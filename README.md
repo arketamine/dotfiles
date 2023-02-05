@@ -9,4 +9,8 @@ Gib mir noch ein halbes Teil und heute Nacht wird super geil!
 2. Setup SSH keys and add them to your GitHub account.
 3. Clone this repository.
 4. Run `infekt.sh`.
-5. Login to your apps, enter license keys, set your preferences, etc.
+5. Install [Nix](https://nixos.org/) package manager (Optional)
+   ```bash
+   sh (curl -L https://nixos.org/nix/install | psub)
+   ```
+6. Login to your apps, enter license keys, set your preferences, etc.
