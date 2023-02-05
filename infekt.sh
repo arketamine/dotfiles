@@ -34,10 +34,9 @@ fi
 info "Installing Rosetta..."
 sudo softwareupdate --install-rosetta
 
-. ./packages/install.sh
-
-find * -name "install.sh" -not -wholename "packages*" | while read path; do
-    . ./$path
-done
+. system/install.sh
+. packages/install.sh
+. vscode/install.sh
+. fish/install.sh
 
 success "Finished installing 'dotfiles'. Happy hacking!"
