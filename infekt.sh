@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
 
+DIR=$(dirname "$0")
+cd "$DIR"
+
 . ./scripts/index.sh
 
 if [ $DSL_OS != "MACOS" ]; then
@@ -7,7 +10,6 @@ if [ $DSL_OS != "MACOS" ]; then
     exit 1
 fi
 
-info "Prompting for sudo password..."
 if sudo -v; then
     # Keep-alive: update existing `sudo` timestamp until script has finished
     while true; do
@@ -15,8 +17,6 @@ if sudo -v; then
         sleep 60
         kill -0 "$$" || exit
     done 2>/dev/null &
-
-    success "Sudo password accepted."
 else
     error "Failed to obtain sudo credentials."
     exit 1
@@ -33,5 +33,7 @@ fi
 
 info "Installing Rosetta..."
 sudo softwareupdate --install-rosetta
+
+. ./packages/install.sh
 
 success "Finished installing 'dotfiles'. Happy hacking!"
