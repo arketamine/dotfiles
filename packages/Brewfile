@@ -15,8 +15,6 @@ cask "slack"
 cask "spotify"
 cask "telegram"
 cask "visual-studio-code"
-cask "vlc"
-cask "zoom"
 
 # Fonts
 cask "font-fira-mono-nerd-font"
