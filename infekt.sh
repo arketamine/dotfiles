@@ -22,21 +22,10 @@ else
     exit 1
 fi
 
-info "Installing XCode CLI tools..."
-if xcode-select --print-path &>/dev/null; then
-    success "XCode CLI tools already installed."
-elif xcode-select --install &>/dev/null; then
-    success "XCode CLI tools installed."
-else
-    error "XCode CLI tools install failed."
-fi
-
-info "Installing Rosetta..."
-sudo softwareupdate --install-rosetta
-
 . system/install.sh
 . packages/install.sh
 . vscode/install.sh
 . fish/install.sh
+. config/install.sh
 
 success "Finished installing 'dotfiles'. Happy hacking!"

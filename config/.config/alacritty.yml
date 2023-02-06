@@ -1,0 +1,127 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+
+# Import additional configuration files
+#
+# Imports are loaded in order, skipping all missing files, with the importing
+# file being loaded last. If a field is already present in a previous import, it
+# will be replaced.
+#
+# All imports must either be absolute paths starting with `/`, or paths relative
+# to the user's home directory starting with `~/`.
+#import:
+#  - /path/to/alacritty.yml
+
+# Any items in the `env` entry below will be added as
+# environment variables. Some entries may override variables
+# set by alacritty itself.
+#env:
+# TERM variable
+#
+# This value is used to set the `$TERM` environment variable for
+# each instance of Alacritty. If it is not present, alacritty will
+# check the local terminfo database and use `alacritty` if it is
+# available, otherwise `xterm-256color` is used.
+#TERM: alacritty
+
+shell:
+  program: /opt/homebrew/bin/fish
+  args:
+    - -l
+    - -c
+    - "source ~/.zshrc; tmux attach 2> /dev/null || tmux"
+
+window:
+  # Background opacity
+  #
+  # Window opacity as a floating point number from `0.0` to `1.0`.
+  # The value `0.0` is completely transparent and `1.0` is opaque.
+  opacity: 1.0
+
+  # Startup Mode (changes require restart)
+  #
+  # Values for `startup_mode`:
+  #   - Windowed
+  #   - Maximized
+  #   - Fullscreen
+  #
+  # Values for `startup_mode` (macOS only):
+  #   - SimpleFullscreen
+  startup_mode: Windowed
+
+  # Window title
+  title: Alacritty
+
+  # Allow terminal applications to change Alacritty's window title.
+  dynamic_title: true
+
+# Font configuration
+font:
+  # Normal (roman) font face
+  normal:
+    family: FuraMono Nerd Font Mono
+    style: Regular
+
+  # Bold font face
+  bold:
+    family: FuraMono Nerd Font Mono
+    style: Bold
+
+  # Italic font face
+  italic:
+    family: FuraMono Nerd Font Mono
+    style: Italic
+
+  # Bold italic font face
+  bold_italic:
+    family: FuraMono Nerd Font Mono
+    style: Bold Italic
+
+  # Point size
+  size: 12.0
+
+  # Use built-in font for box drawing characters.
+  #
+  # If `true`, Alacritty will use a custom built-in font for box drawing
+  # characters (Unicode points 2500 - 259f).
+  #
+  builtin_box_drawing: true
+
+  # If `true`, bold text is drawn using the bright color variants.
+  draw_bold_text_with_bright_colors: false
+
+# Color Schemes
+schemes:
+  TomorrowNight: &TomorrowNight
+    primary:
+      background: "#1d1f21"
+      foreground: "#c5c8c6"
+
+    # Colors the cursor will use if `custom_cursor_colors` is true
+    cursor:
+      text: "#1d1f21"
+      cursor: "#ffffff"
+
+    # Normal colors
+    normal:
+      black: "#1d1f21"
+      red: "#cc6666"
+      green: "#b5bd68"
+      yellow: "#e6c547"
+      blue: "#81a2be"
+      magenta: "#b294bb"
+      cyan: "#70c0ba"
+      white: "#373b41"
+
+    # Bright colors
+    bright:
+      black: "#666666"
+      red: "#ff3334"
+      green: "#9ec400"
+      yellow: "#f0c674"
+      blue: "#81a2be"
+      magenta: "#b77ee0"
+      cyan: "#54ced6"
+      white: "#282a2e"
+
+# Colors
+colors: *TomorrowNight

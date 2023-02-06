@@ -5,6 +5,18 @@ cd "$DIR"
 
 . ./scripts/index.sh
 
+info "Installing XCode CLI tools..."
+if xcode-select --print-path &>/dev/null; then
+    success "XCode CLI tools already installed."
+elif xcode-select --install &>/dev/null; then
+    success "XCode CLI tools installed."
+else
+    error "XCode CLI tools install failed."
+fi
+
+info "Installing Rosetta..."
+sudo softwareupdate --install-rosetta
+
 info "Setting macOS defaults..."
 
 # Closes System Preferences to prevent it from overriding settings we're about to change
