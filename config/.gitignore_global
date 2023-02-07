@@ -236,4 +236,7 @@ tags
 .history
 .ionide
 
+### Terraform ###
+.terraform.lock.hcl
+
 # End of https://www.toptal.com/developers/gitignore/api/macos,intellij+all,visualstudiocode,emacs,vim,fish,bazel,homebrew
