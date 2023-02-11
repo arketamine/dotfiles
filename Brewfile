@@ -3,6 +3,7 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 
 # Apps
+cask "cloudflare-warp"
 cask "datagrip"
 cask "discord"
 cask "docker"
