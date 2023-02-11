@@ -22,10 +22,4 @@ else
     exit 1
 fi
 
-. system/install.sh
-. packages/install.sh
-. vscode/install.sh
-. fish/install.sh
-. config/install.sh
-
 success "Finished installing 'dotfiles'. Happy hacking!"
