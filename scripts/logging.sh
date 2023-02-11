@@ -20,26 +20,27 @@ colored() {
 
     tput bold
     tput setaf "$color"
-    echo "[$prefix]: $message"
+    printf "$prefix"
     tput sgr0
+    printf " $message \n"
 }
 
 info() {
     local message="$1"
-    colored "$message" cyan "   INFO"
+    colored "$message" cyan "      Info"
 }
 
 success() {
     local message="$1"
-    colored "$message" green "SUCCESS"
+    colored "$message" green "   Success"
 }
 
 error() {
     local message="$1"
-    colored "$message" red "  ERROR"
+    colored "$message" red "     Error"
 }
 
 warning() {
     local message="$1"
-    colored "$message" yellow "WARNING"
+    colored "$message" yellow "   Warning"
 }
