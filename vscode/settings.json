@@ -13,7 +13,7 @@
   "editor.minimap.enabled": false,
 
   "editor.rulers": [80, 120],
-  "editor.fontFamily": "IBM Plex Mono",
+  "editor.fontFamily": "BlexMono Nerd Font",
   "editor.fontWeight": "normal",
   "editor.fontLigatures": true,
   "editor.fontSize": 13,
@@ -30,7 +30,7 @@
     "editor.guides.bracketPairs": true
   },
 
-  "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+  "terminal.integrated.fontFamily": "BlexMono Nerd Font",
   "terminal.integrated.fontSize": 13,
 
   "editor.semanticTokenColorCustomizations": {
@@ -72,13 +72,6 @@
   "errorLens.messageMaxChars": 80,
   "errorLens.onSaveTimeout": 2000,
 
-  "terminal.integrated.profiles.osx": {
-    "rosetta": {
-      "path": "/usr/bin/arch",
-      "args": ["-arch", "x86_64", "/bin/zsh"]
-    }
-  },
-
   "files.eol": "\n",
 
   "files.associations": {
@@ -87,7 +80,7 @@
   },
 
   "files.exclude": {
-    "**/.git": true,
+    "**/.git": false,
     "**/.svn": true,
     "**/.hg": true,
     "**/CVS": true,
